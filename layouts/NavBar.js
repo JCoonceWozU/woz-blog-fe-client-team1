@@ -1,16 +1,18 @@
 import React from 'react'
-import { Dropdown, Figure } from 'react-bootstrap';
-
+import { Navbar, Nav, Dropdown, Figure } from 'react-bootstrap';
+import Link from 'next/link'
+       
 const NavBar = () => {
-    return (
-        <nav>
-            <h1>Median</h1>
-            <ul>
-                <li>Home</li>
-            </ul>
-            <button>Sign Up</button>
-            <button>Sign In</button>
-            <p>Profile Image</p>
+    return ( 
+        <Navbar>
+          <Navbar.Brand ><Link href="/">Median</Link></Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link ><Link href="/">Home</Link></Nav.Link>
+            <Nav.Link ><Link href="/profile">Profile</Link></Nav.Link>
+            <Nav.Link ><Link href="/signup">Sign Up</Link></Nav.Link>
+            <Nav.Link ><Link href="/login">Login</Link></Nav.Link>
+            <Nav.Link ><Link href="/articles">Blogs</Link></Nav.Link>
+            <Form inline>
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     <Figure>
@@ -29,7 +31,10 @@ const NavBar = () => {
                     <Dropdown.Item href="#/action-4">Log Out</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-        </nav>
+          </Nav>
+      </Form>
+    </Navbar>
+
     )
 }
 
