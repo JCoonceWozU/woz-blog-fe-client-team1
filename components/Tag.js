@@ -1,10 +1,10 @@
 import React from 'react'
+import {Button} from 'react-bootstrap'
 
 const Tag = ({tag}) => {
-    return(<ul>
-        <li>name: {tag.name}</li>
-        <li>image: {tag.imageUrl}</li>
-    </ul>)
+   return( 
+    <Button variant="success">technology</Button>
+   ) 
 }
 
 export default Tag
