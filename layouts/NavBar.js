@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, Dropdown, Figure } from 'react-bootstrap';
+import { Navbar, Nav, Dropdown, Figure, Form } from 'react-bootstrap';
 import Link from 'next/link'
        
 const NavBar = () => {
@@ -31,8 +31,8 @@ const NavBar = () => {
                     <Dropdown.Item href="#/action-4">Log Out</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-          </Nav>
-      </Form>
+            </Form>
+        </Nav>
     </Navbar>
 
     )
