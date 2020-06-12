@@ -7,3 +7,4 @@ const Tags = ({tags}) => {
     )
 }
 export default Tags;
+
