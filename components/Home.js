@@ -1,12 +1,17 @@
 import React from 'react';
 import Articles from './Articles';
-import Tags from './Tags';
+import Tag from './Tag';
 
 const Home = () => {
     return (
         <div>
            <h1>Home</h1>
-           <Articles />            
+           <Articles />  
+           <Tag />     
+           <Tag />
+           <Tag />
+           <Tag />
+           <Tag />    
         </div>
     )
 }
