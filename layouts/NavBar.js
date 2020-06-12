@@ -8,7 +8,7 @@ const NavBar = () => {
                <li>Home</li>               
            </ul>
            <button>Sign Up</button>
-           <button>Sign In</button>
+           <button>Log In</button>
            <p>Profile Image</p>
        </nav>
     )
