@@ -17,7 +17,10 @@ const Articles = () => {
     }, [])
 
     const articlesDisplay = articles.map(article => (
+      <div> 
         <Article key={article.id} article={article} />
+      <br />
+      </div> 
     ))        
 
     return (        

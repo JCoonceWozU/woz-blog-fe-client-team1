@@ -1,5 +1,6 @@
 import React from 'react';
 import Articles from './Articles';
+import Tags from './Tags';
 
 const Home = () => {
     return (
