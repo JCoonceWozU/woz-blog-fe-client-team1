@@ -1,11 +1,14 @@
-import React from 'react'
-import { Card } from 'react-bootstrap'
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import Link from 'next/link';
 
 const Article = ({ article }) => {
     return (
         <Card>
             <Card.Header>
-                Title: {article.title}
+            <Link href='/articles/[id]' as={'/articles/' + article.id}>
+              <a>Title: {article.title}</a>
+            </Link>
                 {' '}
                 <cite title="Source Title">Source: Author</cite>{' '}
             </Card.Header>
@@ -24,8 +27,7 @@ const Article = ({ article }) => {
                     </footer>
                 </blockquote>
             </Card.Body>
-        </Card>
-
+        </Card>        
     )
 }
 
