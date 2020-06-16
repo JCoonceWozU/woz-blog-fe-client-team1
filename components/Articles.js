@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Article from './Article';
+import Link from 'next/link';
 
 const Articles = () => {
     //intialize state to array and create setter method(setArticles)
@@ -18,8 +19,10 @@ const Articles = () => {
 
     const articlesDisplay = articles.map(article => (
       <div> 
+        <Link as={`/article/${article.id}`} href="/[article]/[id]">
         <Article key={article.id} article={article} />
-      <br />
+        </Link>
+      <br />        
       </div> 
     ))        
 
