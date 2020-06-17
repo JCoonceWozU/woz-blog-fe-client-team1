@@ -18,7 +18,13 @@ const CommentList=() => {
     }]
   
     let commentNodes = comments.map(function(comment, index) {
-    return<Comment key={index} author={comment.author} body={comment.body}/>
+    return(
+        <>
+         <Comment key={index} author={comment.author} body={comment.body}/>
+         <br />
+        </>
+    )
+
     });
         return<div className="commentList">{commentNodes}</div>;
 }

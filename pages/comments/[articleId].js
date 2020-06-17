@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import useSwr from "swr";
 import CommentList from "../../components/CommentList";
 import CommentForm from "../../components/CommentForm";
-import fetch from "../../libs/fetch";
+import Layout from '../../layouts/Layout';
 
 export default function Article() {
   const router = useRouter();
@@ -16,17 +16,17 @@ export default function Article() {
   if (error) return <div>Failed to load comments</div>;
   if (!data) return <div>Loading...</div>;
   return (
-    <>
+    <Layout>
       <h1>Comments</h1>
       <div className="container">
         <div className="commentBox panel panel-default">
-          <div className="panel-body">
-            <h1>Comment Box</h1>
+          <div className="panel-body">            
             <CommentList/>
             <CommentForm/>
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
+ 
