@@ -8,10 +8,11 @@ const NavBar = () => {
           <Navbar.Brand ><Link href="/">Median</Link></Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link ><Link href="/">Home</Link></Nav.Link>
-            <Nav.Link ><Link href="/profile">Profile</Link></Nav.Link>
+            <Nav.Link ><Link href="/articles">Articles</Link></Nav.Link>            
             <Nav.Link ><Link href="/signup">Sign Up</Link></Nav.Link>
             <Nav.Link ><Link href="/login">Login</Link></Nav.Link>
-            <Nav.Link ><Link href="/articles">Blogs</Link></Nav.Link>
+            <Nav.Link ><Link href="/profile">Profile</Link></Nav.Link>
+            
             <Form inline>
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
