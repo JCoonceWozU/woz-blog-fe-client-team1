@@ -24,7 +24,7 @@ const CommentForm = () => {
         <div className="commentForm panel panel-default">
           <div className="panel-body">
             <form className="form" onSubmit={handleSubmit}>
-                <p>Name:Donta</p>
+               
               <input
                 className="form-control"
                 type="text"
@@ -33,7 +33,7 @@ const CommentForm = () => {
                 placeholder="Say something here..."
                />
               <br />
-              <button className="btn btn-default" type="submit">post</button>
+              <button className="btn btn-default" type="submit">Submit</button>
             </form>
           </div>
         </div>
