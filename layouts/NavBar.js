@@ -6,22 +6,24 @@ import Link from 'next/link'
 const NavBar = () => {
     return ( 
         <Navbar>
-          <Navbar.Brand ><Link href="/">Median</Link></Navbar.Brand>
+          <Navbar.Brand 
+             onClick={console.log("What are you doing? Looking for secrets? Don't put your nose where it doesn't belong. Or you might learn something you DON'T like... Hee hee hee.")}
+             style={{fontFamily: "Comic Sans MS", fontSize: "50px"}}  
+             ><Link href="/">Median</Link>
+          </Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link style={{ padding: "10px 20px" }} ><Link href="/">Home</Link></Nav.Link>
-            <Nav.Link style={{ padding: "10px 20px" }} ><Link href="/profile">Profile</Link></Nav.Link>
-            <Nav.Link style={{ padding: "10px 20px" }} ><Link href="/signup">Sign Up</Link></Nav.Link>
-            <Nav.Link style={{ padding: "10px 20px" }} ><Link href="/login">Login</Link></Nav.Link>
-            <Nav.Link style={{ padding: "10px 20px" }} ><Link href="/articles">Blogs</Link></Nav.Link>
+            <Nav.Link style={{ padding: "10px 20px" }}  href="/">Home</Nav.Link>
+            <Nav.Link style={{ padding: "10px 20px" }}  href="/profile">Profile</Nav.Link>
+            <Nav.Link style={{ padding: "10px 20px" }}  href="/signup">Sign Up</Nav.Link>
+            <Nav.Link style={{ padding: "10px 20px" }}  href="/login">Login</Nav.Link>
+            <Nav.Link style={{ padding: "10px 20px" }}  href="/articles">Blogs</Nav.Link>
             </Nav>
             <br/>
             <Form inline >
             <Dropdown class="btn-group dropleft">
-                <Dropdown.Toggle variant="success" id="dropdown-basic">    
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" img src="https://via.placeholder.com/10">My Profile</button> 
-                <Figure >
+                <Dropdown.Toggle  variant="success" id="dropdown-basic">    
+                <Figure type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> My Profile
                         <Figure.Image
-                            alignRight
                             size="lg"
                             width={10}
                             height={10}
