@@ -16,7 +16,7 @@ const Article = ({ article }) => {
                 <blockquote className="blockquote mb-0">
                     <p>
                         {' '}
-                    {article.body}{' '}
+                    {article.shortBody}{' '}
                     </p>
                     <footer className="blockquote-footer">
                     {new Date(article.createdAt).toDateString()}

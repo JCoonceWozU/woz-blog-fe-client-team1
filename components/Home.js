@@ -1,17 +1,11 @@
 import React from "react";
 import Articles from "./Articles";
-import Tag from "./Tag";
 
 const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-
-      <Tag />
-      <Tag />
-      <Tag />
-      <Tag />
-      <Tag />
+      <Articles />     
     </div>
   );
 };
