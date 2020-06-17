@@ -12,6 +12,7 @@ const NavBar = () => {
              ><Link href="/">Median</Link>
           </Navbar.Brand>
           <Nav className="mr-auto">
+
             <Nav.Link style={{ padding: "10px 20px" }}  href="/">Home</Nav.Link>
             <Nav.Link style={{ padding: "10px 20px" }}  href="/profile">Profile</Nav.Link>
             <Nav.Link style={{ padding: "10px 20px" }}  href="/signup">Sign Up</Nav.Link>
@@ -23,6 +24,7 @@ const NavBar = () => {
             <Dropdown class="btn-group dropleft">
                 <Dropdown.Toggle  variant="success" id="dropdown-basic">    
                 <Figure type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> My Profile
+
                         <Figure.Image
                             size="lg"
                             width={10}
