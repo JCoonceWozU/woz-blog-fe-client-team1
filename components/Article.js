@@ -7,7 +7,7 @@ const Article = ({ article }) => {
         <Card>
             <Card.Header>
             <Link href='/articles/[id]' as={'/articles/' + article.id}>
-              <a>Title: {article.title}</a>
+              <a>{article.title}</a>
             </Link>
                 {' '}
                 <cite title="Source Title">Source: Author</cite>{' '}
@@ -16,7 +16,7 @@ const Article = ({ article }) => {
                 <blockquote className="blockquote mb-0">
                     <p>
                         {' '}
-                     Body: {article.body}{' '}
+                    {article.body}{' '}
                     </p>
                     <footer className="blockquote-footer">
                     {new Date(article.createdAt).toDateString()}
