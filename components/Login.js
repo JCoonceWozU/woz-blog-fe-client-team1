@@ -1,7 +1,8 @@
 import React from 'react';
 import {Form, Button, Container} from 'react-bootstrap';
 
-const Login = () => {
+const Login = ({ isLoggedIn, setIsLoggedIn }) => {
+    console.log(isLoggedIn + 1);
     return (
         <Container>
             <h1>Login:</h1>
@@ -21,8 +22,8 @@ const Login = () => {
             <Form.Group controlId="formBasicCheckbox">
                 <Form.Check label="Remember me" />
             </Form.Group>
-            <Button variant="primary" type="submit">
-                Submit
+            <Button variant="primary" type="submit" onClick={() => setIsLoggedIn(!isLoggedIn)}>
+                Log In
             </Button>
             </Form>
         </Container>
