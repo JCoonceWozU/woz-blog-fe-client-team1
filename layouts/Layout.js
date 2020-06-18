@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 
 
 const Layout = (props) => {
-    console.log(props + 2);
+    
     return (
         <div>  
             <Head>
@@ -16,7 +16,7 @@ const Layout = (props) => {
                     crossOrigin="anonymous"
                 />            
             </Head>
-            <NavBar isLoggedIn={props.isLoggedIn} />
+            <NavBar />
             {props.children}
          
         </div>
