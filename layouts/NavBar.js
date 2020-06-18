@@ -4,8 +4,10 @@ import Link from 'next/link';
 import UserContext from '../components/UserContext';
        
 const NavBar = () => {
-  const { isLoggedIn, signOut, toggleLoginButton } = useContext(UserContext);
+  const { isLoggedIn, signOut, toggleLoginButton, user } = useContext(UserContext);
+  console.log("NavBar -> user", user)
   console.log("navbar", isLoggedIn);
+  
   const handleSignOut= (event) => {
     signOut();
     toggleLoginButton();
@@ -25,7 +27,7 @@ const NavBar = () => {
             <br/>
             <Form inline >
             <Nav.Link style={{ padding: "10px 20px" }}  href="/signup">Sign Up</Nav.Link>
-            {isLoggedIn ? <Nav.Link style={{ padding: "10px 20px" }} onClick={handleSignOut}>Log Out</Nav.Link>:
+            {user ?  <Nav.Link style={{ padding: "10px 20px" }} onClick={handleSignOut}>Log Out</Nav.Link>:
             <Nav.Link style={{ padding: "10px 20px" }}  href="/login">Log In</Nav.Link>}
             
             </Form>

@@ -19,7 +19,7 @@ const Login = () => {
             toggleLoginButton();
         } else {
             setMessage("Please Enter Email and Password");
-            setTimeout(function(){ setMessage(""); }, 5000);
+            setTimeout(function(){ setMessage(""); }, 3000);
         }        
     }
 
