@@ -19,8 +19,8 @@ const Articles = () => {
 
     const articlesDisplay = articles.map(article => (
       <div> 
-        <Link as={`/article/${article.id}`} href="/[article]/[id]">
-        <Article key={article.id} article={article} />
+        <Link as={`/article/${article.id}`} href="/[article]/[id]">        
+          <Article key={article.id} article={article} />               
         </Link>
       <br />        
       </div> 
