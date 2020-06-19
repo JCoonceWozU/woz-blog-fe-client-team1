@@ -6,7 +6,7 @@ const Article = ({ article }) => {
     return (
         <Card>
             <Card.Header>
-            <Link href='/articles/[id]' as={'/articles/' + article.id}>
+            <Link href='/articles/[id]' as={'/articles/' + article.slug}>
               <a>{article.title}</a>
             </Link>
                 {' '}
@@ -16,7 +16,7 @@ const Article = ({ article }) => {
                 <blockquote className="blockquote mb-0">
                     <p>
                         {' '}
-                    {article.shortBody}{' '}
+                    {article.description}{' '}
                     </p>
                     <footer className="blockquote-footer">
                     {new Date(article.createdAt).toDateString()}

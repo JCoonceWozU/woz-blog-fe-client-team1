@@ -4,14 +4,18 @@ import Link from 'next/link';
 import UserContext from '../components/UserContext';
        
 const NavBar = () => {
-  const { isLoggedIn, signOut, toggleLoginButton, user } = useContext(UserContext);
+  const { isLoggedIn, signOut, toggleLoginButton, user, canView } = useContext(UserContext);
   console.log("NavBar -> user", user)
   console.log("navbar", isLoggedIn);
   
-  const handleSignOut= (event) => {
+  const handleSignOut= () => {
     signOut();
     toggleLoginButton();
   } 
+
+  const handleView = () => {
+    canView();
+  }
   
     return ( 
         <Navbar bg="dark" variant="dark">
