@@ -7,18 +7,7 @@ export default class MyApp extends App {
     state = {
         user: null,
         isLoggedIn: false
-      };    
-
-      componentDidMount = () => {
-        const user = localStorage.getItem('coolapp-user');
-        if (user) {
-          this.setState({
-            user
-          });
-        } else {
-          Router.push('/login');
-        }
-      };
+      };        
 
       toggleLoginButton= () => {
           console.log("clicked", this.state.isLoggedIn)
@@ -49,11 +38,17 @@ export default class MyApp extends App {
         });
         Router.push('/login');
       };
+
+      canView = () => {
+          if (this.state.user) Router.push('/articles');
+          Router.push('/login');    
+      }
+
       render() {
         const { Component, pageProps } = this.props;
     
         return (
-          <UserContext.Provider value={{ user: this.state.user, signIn: this.signIn, signOut: this.signOut, isLoggedIn: this.state.isLoggedIn, toggleLoginButton: this.toggleLoginButton}}>
+          <UserContext.Provider value={{ user: this.state.user, signIn: this.signIn, signOut: this.signOut, isLoggedIn: this.state.isLoggedIn, toggleLoginButton: this.toggleLoginButton, canView: this.canView}}>
             <Component {...pageProps} />
           </UserContext.Provider>
         );

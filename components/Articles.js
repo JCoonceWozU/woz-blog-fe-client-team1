@@ -9,8 +9,11 @@ const Articles = () => {
     const fetchArticles = async () => {
         let response = await fetch("http://localhost:8080/api/articles");
         //parse response body to give data
-        const fetchedArticles = await response.json();              
-        setArticles(fetchedArticles);             
+        const data = await response.json();              
+        console.log("fetchArticles -> data", data);
+        const {articles}= data
+        console.log("fetchArticles -> articles", articles)
+        setArticles(articles);             
     }
 
     useEffect(() => {

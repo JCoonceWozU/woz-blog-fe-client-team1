@@ -1,30 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Median
+Built a news article site for viewers to read articles made by admins. 
 
-## Getting Started
+![Home Page](/public/home_median.png)
 
-First, run the development server:
+# Walkthrough
+### Login
+![Login](/public/login.gif)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# Tech Stack
+* Next.js
+* Angular
+* PostgreSQL
+* Bootstrap
+* Spring Boot
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Local Setup
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## API Setup:
+1. Run git clone https://github.com/woz-u-java-course/woz-u-blog-api-team1 and navigate to the project folder with cd mui-toolkit
+2. Run npm install
+3. Run npm run start to start the app on http://localhost:8080/
 
-## Learn More
+## Front End Setup:
+1. Run git clone https://github.com/woz-u-java-course/woz-blog-fe-client-team1 and navigate to the project folder with cd mui-toolkit
+2. Run npm install
+3. Run npm run start to start the app on http://localhost:3000/
 
-To learn more about Next.js, take a look at the following resources:
+## Angular Setup:
+1. Run git clone https://github.com/woz-u-java-course/woz-blog-team1 and navigate to the project folder with cd mui-toolkit
+2. Run npm install
+3. Run npm run start to start the app on http://localhost:4200/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Features
+* Created admin dashboard using angular
+* Users can comment on articles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Project Challenges
+* Next.js has had many changes and the documentation did not keep up to give enough support
+* Implementing security with Okta
+* Working with team members located in different time zones and in a remote enviornment
+* Learning how to properly use jackson API
+* Routing Angular app to kotlin database
 
-## Deploy on Vercel
+# Learning Takeaways
+* Using hooks with swr in Next.js
+* CORS issue solved
+* Static routing and dynamic routing- pros and cons
+* Understanding circular dependecy and properly set up JSON data
+* Learning best practices for implementing boot strap
+* State management using React context to create tranferable global state used throughout application
+* Learned how to design and implement stateful vs stateless components 
+* Implemented agile methodology through use of the creation of tickets, Git Kraken board, and standup to plan and replan the development process of the application
+* How to properly implement third party APIs on the back end
+* Understanding CRUD methods and how to use them within the application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Contributors
+### Github Accounts
+* [Alicia Diller ](https://github.com/AliciaD925)
+* [Fisseha Alemu](https://github.com/fissum2020)
+* [Tyler Osborne](https://github.com/Tyler-Osborne)
+* [Ansil Ramsingh](https://github.com/AnsilRsingh)
+* [Juaquin Gomez](https://github.com/JuaquinGomez)
+* [Quinton Davis](https://github.com/quintondavis)
+* [Donta Hatch](https://github.com/dhatch36)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Linkedin Accounts
+* [Alicia Diller ](https://www.linkedin.com/in/alicia-diller-71ab0919a/)
+* [Fisseha Alemu](https://www.linkedin.com/in/fisseha-alemu)
+* [Tyler Osborne](https://www.linkedin.com/in/tylerdeanosborne)
+* [Ansil Ramsingh](https://www.linkedin.com/in/ansil-ramsingh-48634517b/)
+* [Juaquin Gomez](https://www.linkedin.com/in/juaquin-gomez-820837181/)
+* [Quinton Davis](https://www.linkedin.com/in/quintonsdavis)
+* [Donta Hatch](https://www.linkedin.com/in/dontahatch)
