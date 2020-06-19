@@ -12,17 +12,32 @@ const Login = () => {
     const authenticate = event => {
         event.preventDefault();
         console.log("here");
-        if (email !== "" && password !== "") {
+        if (valEmail(email) && valPassword(password)) {
             //allow user to login
             signIn(email);
             console.log("you're logged in")
             toggleLoginButton();
         } else {
-            setMessage("Please Enter Email and Password");
+            setMessage("Please Enter Valid Email and Password");
             setTimeout(function(){ setMessage(""); }, 3000);
         }        
     }
-
+    const valEmail = (email) => {   
+        //search string for @ and .com
+            if (email.search("@") !== -1 && email.search(".com") !== -1) {
+                return true;
+            } 
+            return false;
+        //email must have @, .com
+        //return a boolean        
+    }
+    const valPassword = (password) => {
+        if (password.length >= 6) return true;
+        return false;
+    }
+    
+   
+    //password length of 6 characters
     //check if email or password fields are not empty
     //if not empty remove message
     //or else add message
@@ -42,7 +57,8 @@ const Login = () => {
             <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Enter Password" value={password} onChange={event => setPassword(event.target.value)} />
-                 {message && <div className= "message">{message}</div>}
+                <br />
+                {message && <div className= "message">{message}</div>}
             </Form.Group>
             <Form.Group controlId="formBasicCheckbox">
                 <Form.Check label="Remember me" />
@@ -56,7 +72,7 @@ const Login = () => {
             .message {
                 color: red;
                 font-size: 16px;
-                max-width: 260px;
+                max-width: 300px;
                 text-align: center;
             }`}</style>
         </Container>
